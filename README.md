@@ -65,8 +65,8 @@ redis.conf
 ```
 # bind 127.0.0.1
 protected-mode no
-requirepass sfdp
-masterauth sfdp
+requirepass mypassword
+masterauth mypassword
 min-slaves-to-write 1
 min-slaves-max-lag 10
 ```
@@ -74,9 +74,9 @@ min-slaves-max-lag 10
 ```
 # bind 127.0.0.1
 protected-mode no
-requirepass sfdp
+requirepass mypassword
 slaveof 192.168.1.1 6379
-masterauth sfdp
+masterauth mypassword
 min-slaves-to-write 1
 min-slaves-max-lag 10
 ```
@@ -91,11 +91,11 @@ min-slaves-max-lag 10
 ```
 sentinel.conf
 ```
-sentinel monitor sfdpmaster 192.168.1.1 6379 2
-sentinel auth-pass sfdpmaster sfdp
-sentinel down-after-milliseconds sfdpmaster 60000
-sentinel failover-timeout sfdpmaster 180000
-sentinel parallel-syncs sfdpmaster 1
+sentinel monitor mymaster 192.168.1.1 6379 2
+sentinel auth-pass mymaster mypassword
+sentinel down-after-milliseconds mymaster 60000
+sentinel failover-timeout mymaster 180000
+sentinel parallel-syncs mymaster 1
 protected-mode no
 ```
 6. 将sentinel.conf拷贝到slave的conf目录下。
