@@ -75,7 +75,7 @@ min-slaves-max-lag 10
 # bind 127.0.0.1
 protected-mode no
 requirepass sfdp
-slaveof 10.118.242.72 6379
+slaveof 192.168.1.1 6379
 masterauth sfdp
 min-slaves-to-write 1
 min-slaves-max-lag 10
@@ -100,8 +100,8 @@ protected-mode no
 ```
 6. 将sentinel.conf拷贝到slave的conf目录下。
 ```
-> scp conf/sentinel.conf 10.118.242.75:/usr/local/redis/conf/sentinel.conf
-> scp conf/sentinel.conf 10.118.242.76:/usr/local/redis/conf/sentinel.conf
+> scp conf/sentinel.conf 192.168.1.2:/usr/local/redis/conf/sentinel.conf
+> scp conf/sentinel.conf 192.168.1.3:/usr/local/redis/conf/sentinel.conf
 ```
 7. 启动master。
 ```
