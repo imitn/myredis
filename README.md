@@ -1,4 +1,4 @@
-# myredis是一个spring集成redis的例子，让初学者迅速上手在java项目中使用redis
+# Hello Redis，myredis是一个spring集成redis的例子，让初学者迅速上手在java项目中使用redis
 
 ## 什么是Redis？
 Redis是一个开源，高级的键值存储和一个适用的解决方案，用于构建高性能，可扩展的Web应用程序。
@@ -115,5 +115,5 @@ protected-mode no
 ```
 > ./bin/redis-sentinel conf/sentinel.conf
 ```
-## myredis
+## 启动myredis
 通过以上步骤，我们的redis高可用集群已经搭建并启动完毕。接着就可以在eclipse导入myredis项目（maven项目）了。运行RedisServiceTest测试用例，就可以看到Java项目中对redis进行操作的结果了。
